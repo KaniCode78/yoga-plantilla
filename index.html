@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Yogahv – Breathe • Stretch • Transform</title>
+  <meta name="description" content="Clases de yoga guiadas por expertos para fortalecer cuerpo y mente." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <!-- EmailJS SDK (necesario para el formulario) -->
+  <script defer src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+</head>
+<body>
+  <!-- ===== Header / Navbar ===== -->
+  <header class="site-header glass-soft">
+    <div class="container nav-wrap">
+      <a class="brand" href="#">
+        <span class="brand-mark" aria-hidden="true">🜂</span>
+        <span class="brand-name">Yogahv</span>
+      </a>
+
+      <nav class="nav" aria-label="Principal">
+        <button class="nav__toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu" aria-label="Abrir menú">
+          <span class="b"></span><span class="b"></span><span class="b"></span>
+        </button>
+        <ul class="nav__menu" id="navMenu">
+          <li><a href="#mission">Nuestra misión</a></li>
+          <li><a href="#classes">Clases</a></li>
+          <li><a href="#programs">Programas</a></li>
+          <li><a href="#about">Comunidad</a></li>
+          <li><a href="#contact" class="btn btn--small">Reservar</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== Hero ===== -->
+  <section class="hero">
+    <div class="hero__media" role="img" aria-label="Práctica de yoga al amanecer">
+      <!-- Reemplaza por tu imagen de mockup si quieres -->
+      <img src="https://images.unsplash.com/photo-1552196563-55cd4e45efb3?q=80&w=2000&auto=format&fit=crop" alt="" />
+    </div>
+
+ <div class="container hero__content">
+  <h1 class="hero__title">
+    <span>BREATHE</span>
+    <span>STRETCH</span>
+    <span>TRANSFORM</span>
+  </h1>
+
+  <div class="hero__cta">
+    <a href="#classes" class="btn btn--primary">Start your journey</a>
+    <a href="#programs" class="btn btn--ghost">Explore programs</a>
+  </div>
+
+  <aside class="floating-card" aria-label="Estado del estudio">
+
+        <div class="fc__row">
+          <div class="fc__col">
+            <p class="fc__label">TIME</p>
+            <p class="fc__value"><span id="timeNow">—:—</span></p>
+            <p class="fc__muted">Mon–Sat • 6:45–20:30</p>
+            <p class="fc__chip" id="openBadge">Closed</p>
+          </div>
+          <div class="fc__col">
+            <p class="fc__label">OUR LOCATION</p>
+            <button class="chip chip--icon" id="mapBtn" type="button" aria-label="Abrir ubicación">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5Z"/></svg>
+              <span>Open map</span>
+            </button>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- ===== Benefits ===== -->
+  <section id="mission" class="section">
+    <div class="container grid-2">
+      <div class="stack">
+        <p class="eyebrow">Fundado en 2020</p>
+        <h2>Experimenta los verdaderos beneficios del yoga</h2>
+        <p>Creemos que el yoga es más que ejercicio; es un estilo de vida. Nuestros instructores certificados imparten Hatha, Vinyasa, Ashtanga y prácticas restaurativas para todos los niveles.</p>
+        <a href="#classes" class="btn btn--ghost">Explorar clases</a>
+      </div>
+      <div class="benefit-media">
+        <figure class="card-photo glass-soft">
+          <img src="https://images.unsplash.com/photo-1599447421347-c9e64f0b4b65?q=80&w=1400&auto=format&fit=crop" alt="Instructora guiando estiramiento" />
+          <figcaption>Aprende con profesionales certificados.</figcaption>
+        </figure>
+        <div class="metric-box glass-strong">
+          <strong>1239+</strong>
+          <span>Alumnos transformados</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Programs ===== -->
+  <section id="programs" class="section section--tint">
+    <div class="container">
+      <header class="section__head">
+        <h2>Transforma tu práctica con nuestros programas</h2>
+        <p>Ingredientes locales, mente y cuerpo sanos. Pases de inicio, equipo básico y asesoría incluida.</p>
+      </header>
+
+      <div class="card-grid">
+        <article class="program glass-soft">
+          <img src="https://images.unsplash.com/photo-1514996937319-344454492b37?q=80&w=1400&auto=format&fit=crop" alt="Hatha Yoga" />
+          <div class="program__body">
+            <h3>Hatha Foundations</h3>
+            <p>Base sólida de posturas y respiración consciente. Ideal para principiantes.</p>
+            <a href="#contact" class="link">Probar una clase →</a>
+          </div>
+        </article>
+
+        <article class="program glass-soft">
+          <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=1400&auto=format&fit=crop" alt="Vinyasa Flow" />
+          <div class="program__body">
+            <h3>Vinyasa Flow</h3>
+            <p>Secuencias dinámicas para fuerza, movilidad y foco mental.</p>
+            <a href="#contact" class="link">Reservar cupo →</a>
+          </div>
+        </article>
+
+        <article class="program glass-soft">
+          <img src="https://images.unsplash.com/photo-1534361960057-19889db9621e?q=80&w=1400&auto=format&fit=crop" alt="Ashtanga" />
+          <div class="program__body">
+            <h3>Ashtanga Series</h3>
+            <p>Progresión estructurada para disciplina y resistencia.</p>
+            <a href="#contact" class="link">Ver horarios →</a>
+          </div>
+        </article>
+
+        <article class="program glass-soft">
+          <img src="https://images.unsplash.com/photo-1540206276208-8b7a62069a34?q=80&w=1400&auto=format&fit=crop" alt="Restaurativo" />
+          <div class="program__body">
+            <h3>Restorative Calm</h3>
+            <p>Recupera energía con sesiones suaves, props y respiración.</p>
+            <a href="#contact" class="link">Más info →</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Steps & Stats ===== -->
+  <section class="section" id="steps">
+    <div class="container grid-2">
+      <div class="steps glass-soft">
+        <h2>Empezar es simple</h2>
+        <ol class="step-list">
+          <li>
+            <span class="step-icon">①</span>
+            <div><strong>Agenda</strong><p>Elige tu clase y horario favorito.</p></div>
+          </li>
+          <li>
+            <span class="step-icon">②</span>
+            <div><strong>Conecta</strong><p>Conoce a tu coach y objetivos.</p></div>
+          </li>
+          <li>
+            <span class="step-icon">③</span>
+            <div><strong>Transforma</strong><p>Practica, respira y crece cada semana.</p></div>
+          </li>
+        </ol>
+      </div>
+
+      <div class="stats">
+        <div class="stat glass-strong"><strong>50+</strong><span>Sesiones semanales</span></div>
+        <div class="stat glass-strong"><strong>2M</strong><span>Minutos guiados</span></div>
+        <div class="stat glass-strong"><strong>85%</strong><span>Alumnos recurrentes</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Slider ===== -->
+  <section class="section section--tint" id="about">
+    <div class="container">
+      <header class="section__head"><h2>Descubre el corazón de nuestra comunidad</h2></header>
+      <div class="slider" data-slider>
+        <button class="slider__btn prev" aria-label="Anterior" data-prev>‹</button>
+        <div class="slider__track" data-track>
+          <figure class="slide glass-soft">
+            <img src="https://images.unsplash.com/photo-1555774698-0b77e0d5fac6?q=80&w=1400&auto=format&fit=crop" alt="Clase grupal al exterior" />
+            <figcaption>Clases al aire libre.</figcaption>
+          </figure>
+          <figure class="slide glass-soft">
+            <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?q=80&w=1400&auto=format&fit=crop" alt="Meditación guiada" />
+            <figcaption>Meditación al cierre.</figcaption>
+          </figure>
+          <figure class="slide glass-soft">
+            <img src="https://images.unsplash.com/photo-1554306274-f23873d9a26f?q=80&w=1400&auto=format&fit=crop" alt="Corrección de postura" />
+            <figcaption>Acompañamiento cercano.</figcaption>
+          </figure>
+        </div>
+        <button class="slider__btn next" aria-label="Siguiente" data-next>›</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA ===== -->
+  <section id="contact" class="cta">
+    <div class="container cta__wrap">
+      <div class="cta__card glass-strong">
+        <div class="cta__text">
+          <h2>LET’S TALK</h2>
+          <p>¿Listo para comenzar? Agenda una visita y te ayudamos a elegir el mejor programa.</p>
+        </div>
+        <form class="cta__form" id="contactForm" aria-label="Contacto rápido">
+          <label class="sr-only" for="name">Nombre</label>
+          <input id="name" name="name" type="text" placeholder="Tu nombre" required>
+          <label class="sr-only" for="email">Email</label>
+          <input id="email" name="email" type="email" placeholder="Tu email" required>
+          <button class="btn btn--primary" type="submit">Agendar llamada</button>
+          <p class="form-msg" id="formMsg" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="brand brand--footer" href="#"><span class="brand-mark" aria-hidden="true">🜂</span> Yogahv</a>
+        <p class="muted">Respira profundo. Estira. Transfórmate.</p>
+      </div>
+      <nav aria-label="Footer">
+        <ul class="foot-links">
+          <li><a href="#mission">Misión</a></li>
+          <li><a href="#programs">Programas</a></li>
+          <li><a href="#steps">Cómo empezar</a></li>
+          <li><a href="#contact">Contacto</a></li>
+        </ul>
+      </nav>
+      <p class="copyright">© <span id="year"></span> Yogahv. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
